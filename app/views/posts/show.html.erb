@@ -17,6 +17,20 @@
               <li>
                 <i class="fa fa-calendar"></i><%= @post.created_at.strftime('%Y/%m/%d') %>
               </li>
+              <!-- いいね -->
+              <% if @post.liked_by?(current_user) %>
+              <li>
+                <%= link_to post_likes_path(@post), method: :delete do %>
+                  <i class="fa fa-heart" aria-hidden="true" style="color: red;"></i>
+                <% end %>
+              </li>
+              <% else %>
+              <li>
+                <%= link_to post_likes_path(@post), method: :post do %>
+                  <i class="fa fa-heart-o" aria-hidden="true"></i>
+                <% end %>
+              </li>
+              <% end %>
               <!-- <li> -->
                 <!-- <i class="fa fa-comment"></i> -->
                 <!-- <a href="#comments">4</a> -->
@@ -32,9 +46,6 @@
                 <% end %>
               </li>
             </ul>
-<!--             <div class="post-content-inner mt-20">
-              <p><%= @post.caption %></p>
-            </div> -->
           </div>
 
           <div class="comment-list bt style-2" id="comments">

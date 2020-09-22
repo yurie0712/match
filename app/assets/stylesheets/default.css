@@ -11530,14 +11530,45 @@ body {
 /*profile-imageの追加*/
 h3.profile-name{
   display: inline-block;
-  font-size: 35px;
-  line-height: 100px;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 30px;
   margin-left: 100px;
+  margin-bottom: 0px;
+}
+
+h4.profile-other{
+  display: inline-block;
+  color: #333333;
+  font-size: 15px;
+  line-height: 30px;
+  margin-left: 10px;
+  margin-bottom: 0px;
+}
+
+h4.profile-sub{
+  display: inline-block;
+  color: #333333;
+  font-size: 15px;
+  line-height: 15px;
+  margin-left: 100px;
+  margin-bottom: 0px;
+}
+
+h5.profile-introduction{
+  display: inline-block;
+  font-size: 12px;
+  line-height: 50px;
+  margin-left: 100px;
+}
+
+.profile-menu{
+  text-align: center;
 }
 
 .profile-container{
   width: 50%;
-  height: 150px;
+  height: 180px;
   margin: 0 auto;
 }
 

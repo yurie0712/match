@@ -11,7 +11,7 @@ class PostsController < ApplicationController
   end
 
   def index
-    @posts = Post.all
+    @posts = Post.all.includes(:user)
   end
 
   def show
@@ -38,6 +38,11 @@ class PostsController < ApplicationController
     @user = current_user
     @tag = PostTag.find_by(tagname: params[:name])
     @post = @tag.posts.all
+  end
+
+  def likes
+    # has many throughオプションで下記記述でデータの取得が可能
+    @posts = current_user.like_posts.includes(:user).recent
   end
 
   private
