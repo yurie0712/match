@@ -10,7 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_22_061112) do
+ActiveRecord::Schema.define(version: 2020_09_22_064017) do
+
+  create_table "post_tags", force: :cascade do |t|
+    t.string "tagname"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["tagname"], name: "index_post_tags_on_tagname", unique: true
+  end
+
+  create_table "post_tags_posts", force: :cascade do |t|
+    t.integer "post_id"
+    t.integer "post_tag_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["post_id"], name: "index_post_tags_posts_on_post_id"
+    t.index ["post_tag_id"], name: "index_post_tags_posts_on_post_tag_id"
+  end
 
   create_table "posts", force: :cascade do |t|
     t.string "image_id"
