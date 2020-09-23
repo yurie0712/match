@@ -28,7 +28,7 @@ License URI: http://wrapbootstrap.com
   background-color: #232323;
 }
 .navbar-logo img{
-  margin-top: 10px;
+  margin-top: 0px;
 }
 .navbar-main.navbar-shadow {
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
@@ -54,7 +54,7 @@ License URI: http://wrapbootstrap.com
   font-size: 14px;
   font-family: "Roboto", sans-serif;
   padding: 16px 30px 16px 20px;
-  margin: 15px 0;
+  margin: 0;
   font-weight: 500;
   background-color: transparent;
   text-transform: capitalize;
@@ -2756,7 +2756,7 @@ footer.style-1.bb {
   border-color: #1e1e1e !important;
 }
 footer.style-2 {
-  background: #191919;
+  background: #EAEBED;
 }
 footer.style-2.bt,
 footer.style-2.bb {
