@@ -1,8 +1,10 @@
 class UsersController < ApplicationController
+  before_action :authenticate_user!
 
   def show
   	@user = User.find(params[:id])
   	@posts = @user.posts.all
+    @likes = @user.likes.all
   end
 
   def edit
