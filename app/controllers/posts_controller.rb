@@ -40,11 +40,6 @@ class PostsController < ApplicationController
     @post = @tag.posts.all
   end
 
-  def likes
-    # has many throughオプションで下記記述でデータの取得が可能
-    @posts = current_user.like_posts.includes(:user).recent
-  end
-
   private
 
   def post_params
