@@ -10,13 +10,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_22_134512) do
+ActiveRecord::Schema.define(version: 2020_09_23_100214) do
+
+  create_table "like_tags", force: :cascade do |t|
+    t.string "tagname"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["tagname"], name: "index_like_tags_on_tagname", unique: true
+  end
+
+  create_table "like_tags_likes", force: :cascade do |t|
+    t.integer "like_id"
+    t.integer "like_tag_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["like_id"], name: "index_like_tags_likes_on_like_id"
+    t.index ["like_tag_id"], name: "index_like_tags_likes_on_like_tag_id"
+  end
 
   create_table "likes", force: :cascade do |t|
     t.integer "user_id"
     t.integer "post_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "caption"
     t.index ["user_id", "post_id"], name: "index_likes_on_user_id_and_post_id", unique: true
   end
 

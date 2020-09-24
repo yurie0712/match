@@ -4,4 +4,25 @@
 <div class="profile-menu">
   <%= link_to "投稿", user_path(@user) %>　<%= link_to "お気に入り一覧", likes_path %>
 </div>
-<%= render 'likes/like', likes: @likes %>
+<section class="sct-color-1 slice">
+  <div class="container-fluid masonry-container">
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-2">
+        <div class="sidemenu">
+          <br>
+          <% @liketags.each do |liketag| %>
+            <br><%= link_to  "##{liketag.tagname}","/like/like_tag/#{liketag.tagname}" %>
+          <% end %>
+          <br>
+          <br>
+          <br>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <%= render 'likes/like', likes: @likes %>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+  </div>
+</section>

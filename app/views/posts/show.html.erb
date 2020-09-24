@@ -33,10 +33,6 @@
                 </li>
                 <% end %>
               <% end %>
-              <!-- <li> -->
-                <!-- <i class="fa fa-comment"></i> -->
-                <!-- <a href="#comments">4</a> -->
-              <!-- </li> -->
               <li>
                 <% if @post.user == current_user %>
                   <%= link_to "編集", edit_post_path(@post) %>
