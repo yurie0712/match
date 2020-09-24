@@ -42,6 +42,11 @@ License URI: http://wrapbootstrap.com
     width: 100%;
   }
 }
+/* original */
+.sidemenu {
+  background-color: #ffffff;
+  height: 100%;
+}
 /* NAVBAR */
 .navbar-main .navbar-text {
   color: #333333;

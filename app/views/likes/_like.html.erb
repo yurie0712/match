@@ -1,33 +1,23 @@
-<section class="sct-color-1 slice">
-  <div class="container-fluid masonry-container">
-    <div class="row">
-      <div class="col-md-8 col-sm-offset-2">
-        <div class="masonry-wrapper-cols">
-          <div class="masonry-gutter"></div>
-          <% likes.each do |like| %>
-            <div class="masonry-block">
-              <div class="block block-image v1">
-                <div class="block-image">
-                  <div class="view view-first">
-                  	<%= link_to post_path(like.post.id) do %>
-                      <%= attachment_image_tag like.post, :image %>
-                    <% end %>
-                  </div>
-                </div>
-                <div class="block-content">
-                <p></p>
-                <ul class="inline-meta">
-                	<li>By
-                      <%= like.post.user.name %>
-                  </li>
-                  <li>
-                  </li>
-                </ul>
-              </div>
-            </div>
+<% likes.each do |like| %>
+  <div class="masonry-block">
+    <div class="block block-image v1">
+      <div class="block-image">
+        <div class="view view-first">
+          <%= link_to post_path(like.post.id) do %>
+            <%= attachment_image_tag like.post, :image %>
           <% end %>
         </div>
       </div>
+      <div class="block-content">
+        <p></p>
+        <ul class="inline-meta">
+          <li>
+            <%= link_to edit_like_path(like) do %>
+              <ion-icon name="menu-outline"></ion-icon>
+            <% end %>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
-</section>
+<% end %>

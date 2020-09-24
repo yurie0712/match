@@ -4,4 +4,17 @@
 <div class="profile-menu">
 <%= link_to "投稿", user_path(@user) %>　<%= link_to "お気に入り一覧", likes_path %>
 </div>
-<%= render 'posts/list', posts: @posts %>
+<section class="sct-color-1 slice">
+  <div class="container-fluid masonry-container">
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-2"></div>
+      <div class="col-md-8">
+        <div class="masonry-wrapper-cols">
+          <%= render 'posts/list', posts: @posts %>
+        </div>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,27 @@
+<section class="slice sct-color-1">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="row">
+          <div class="col-md-6 col-md-offset-3 post_image_form">
+            <div class="section-title-wrapper style-1 v1">
+              <h3 class="section-title section-title-sm left">
+                <span>カテゴリー編集</span>
+              </h3>
+            </div>
+            <%= form_with model:@like, url: like_path, local: true do |f| %>
+              <br>
+              <div class="row">
+                <div class="col-sm-12">
+                  <%= f.text_area :caption, class:"form-control", rows:"3", placeholder:"例）#ケーキ" %>
+                </div>
+              </div>
+              <hr>
+              <%= f.submit "送信", class:"btn btn-lg btn-block btn-base-1 mt-20" %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
