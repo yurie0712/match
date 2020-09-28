@@ -1,0 +1,25 @@
+<div class="profile-container">
+  <%= render 'users/profile', user: @user %>
+</div>
+<div class="profile-menu">
+  <%= link_to "投稿", user_path(@user) %>　<%= link_to "お気に入り", likes_path %>　<%= link_to "Bookmark", bookmarks_path %>
+</div>
+<section class="sct-color-1 slice">
+  <div class="container-fluid masonry-container">
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-2">
+        <div class="sidemenu">
+          <br>ああああああ
+          <br>
+          <br>
+          <br>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <%= render 'bookmarks/bookmark', bookmarks: @bookmarks %>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+  </div>
+</section>
