@@ -2,7 +2,7 @@ class LikesController < ApplicationController
 
   def index
     @user = current_user
-    @likes = @user.likes.all
+    @likes = @user.likes.all.order(id: "DESC")
     @liketags = LikeTag.all
   end
 
@@ -33,7 +33,8 @@ class LikesController < ApplicationController
   def like_tag
     @user = current_user
     @tag = LikeTag.find_by(tagname: params[:name])
-    @like = @tag.likes.all
+    @liketags = LikeTag.all.order(id: "DESC")
+    @like = @tag.likes.all.order(id: "DESC")
   end
 
   private

@@ -10,7 +10,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_23_100214) do
+ActiveRecord::Schema.define(version: 2020_09_30_095804) do
+
+  create_table "bookmark_tags", force: :cascade do |t|
+    t.string "tagname"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["tagname"], name: "index_bookmark_tags_on_tagname", unique: true
+  end
+
+  create_table "bookmark_tags_bookmarks", force: :cascade do |t|
+    t.integer "bookmark_id"
+    t.integer "bookmark_tag_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["bookmark_id"], name: "index_bookmark_tags_bookmarks_on_bookmark_id"
+    t.index ["bookmark_tag_id"], name: "index_bookmark_tags_bookmarks_on_bookmark_tag_id"
+  end
+
+  create_table "bookmarks", force: :cascade do |t|
+    t.integer "user_id"
+    t.string "title"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.text "caption"
+  end
 
   create_table "like_tags", force: :cascade do |t|
     t.string "tagname"
@@ -34,7 +58,6 @@ ActiveRecord::Schema.define(version: 2020_09_23_100214) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text "caption"
-    t.index ["user_id", "post_id"], name: "index_likes_on_user_id_and_post_id", unique: true
   end
 
   create_table "post_tags", force: :cascade do |t|
