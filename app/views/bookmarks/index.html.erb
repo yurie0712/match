@@ -10,7 +10,10 @@
       <div class="col-md-1"></div>
       <div class="col-md-2">
         <div class="sidemenu">
-          <br>ああああああ
+          <br>
+          <% @bookmarktags.each do |bookmarktag| %>
+            <br><%= link_to  "##{bookmarktag.tagname}","/bookmark/bookmark_tag/#{bookmarktag.tagname}",class: "btn btn-default btn-sm" %>
+          <% end %>
           <br>
           <br>
           <br>

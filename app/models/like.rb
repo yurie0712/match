@@ -2,7 +2,7 @@ class Like < ApplicationRecord
 
   belongs_to :user
   belongs_to :post
-  has_and_belongs_to_many :like_tags
+  has_and_belongs_to_many :like_tags, dependent: :destroy
 
   before_update do
     # self.id = 実態を含んだidの変数

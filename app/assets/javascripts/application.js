@@ -16,3 +16,9 @@
 //= require jquery
 //= require bootstrap-sprockets
 //= require_tree .
+
+// タイトル
+document.querySelector('meta[property="og:title"]').getAttribute('content');
+
+// ディスクリプション
+document.querySelector('meta[property="og:description"]').getAttribute('content')

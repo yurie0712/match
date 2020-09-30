@@ -43,10 +43,33 @@ License URI: http://wrapbootstrap.com
   }
 }
 /* original */
-.sidemenu {
-  background-color: #ffffff;
-  height: 100%;
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
 }
+
+/* indexページ */
+.index-list {
+  box-shadow: 0 10px 15px 0 rgba(0, 0, 0, .5);
+}
+
+/* listページ */
+.list {
+  float: left;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  box-shadow: 0 10px 15px 0 rgba(0, 0, 0, .5);
+}
+
+/* likeページ */
+.like {
+  float: left;
+  margin-right: 5px;
+  margin-bottom: 20px;
+  box-shadow: 0 10px 15px 0 rgba(0, 0, 0, .5);
+}
+
 /* NAVBAR */
 .navbar-main .navbar-text {
   color: #333333;

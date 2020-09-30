@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   end
   resources :users, only: [:show, :edit, :update]
   resources :likes, only: [:index, :edit, :update]
+  resources :bookmarks
 
   get '/post/post_tag/:name' => 'posts#post_tag'
   get '/post/post_tag' => 'posts#post_tag'
