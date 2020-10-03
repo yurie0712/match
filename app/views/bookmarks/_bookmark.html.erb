@@ -1,6 +1,12 @@
 <% bookmarks.each do |bookmark| %>
   <div class="list">
-    <%= text_url_to_link(h(bookmark.title)).html_safe %>
+    <iframe id="inlineFrameExample"
+    title="Inline Frame Example"
+    width="300"
+    height="200"
+    src="<%= bookmark.title %>">
+    </iframe>
+<!--     <%= text_url_to_link(h(bookmark.title)).html_safe %> -->
   </div>
   <ul class="inline-meta">
     <li>
