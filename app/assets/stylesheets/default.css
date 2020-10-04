@@ -1607,12 +1607,12 @@ fieldset[disabled] .navbar-main .btn-link:focus {
 }
 /* QUICK SHADOW CLASSES (sht = shadow top; shb = shadow bottom; shl = shadow left; shr = shadow right) */
 .sht-1 {
-  background-image: url('..//images/shadows/shadow-1.png');
+  background-image: image-url('..//images/shadows/shadow-1.png');
   background-repeat: no-repeat;
   background-position: top center;
 }
 .shb-1 {
-  background-image: url('..//images/shadows/shadow-1.png');
+  background-image: image-url('..//images/shadows/shadow-1.png');
   background-repeat: no-repeat;
   background-position: bottom center;
 }
@@ -2161,22 +2161,22 @@ section.slice-xl {
   background-color: #ffffff;
 }
 .body-bg-4 {
-  background: url("..//images/patterns/diagmonds.png") repeat;
+  background: image-url("..//images/patterns/diagmonds.png") repeat;
 }
 .body-bg-5 {
-  background: url("..//images/patterns/purty-wood.png") repeat;
+  background: image-url("..//images/patterns/purty-wood.png") repeat;
 }
 .body-bg-6 {
-  background: url("..//images/patterns/brickwall.png") repeat;
+  background: image-url("..//images/patterns/brickwall.png") repeat;
 }
 .body-bg-7 {
-  background: url("..//images/backgrounds/body-bg-1.jpg") no-repeat fixed;
+  background: image-url("..//images/backgrounds/body-bg-1.jpg") no-repeat fixed;
 }
 .body-bg-8 {
-  background: url("..//images/backgrounds/body-bg-2.jpg") no-repeat fixed;
+  background: image-url("..//images/backgrounds/body-bg-2.jpg") no-repeat fixed;
 }
 .body-bg-9 {
-  background: url("..//images/backgrounds/body-bg-3.jpg") no-repeat fixed;
+  background: image-url("..//images/backgrounds/body-bg-3.jpg") no-repeat fixed;
 }
 /* ## FONT FAMILIES ## - Remove or comment the fonts you don't use*/
 /* Sue Ellen Francisco */
@@ -2807,7 +2807,7 @@ footer.style-4.bb {
 }
 /* IMAGE BG FOOTERS */
 footer.style-5 {
-  background: url("..//images/patterns/blue-diamonds.png");
+  background: image-url("..//images/patterns/blue-diamonds.png");
 }
 /* GENERAL STYLING */
 footer:before,
@@ -2943,7 +2943,7 @@ footer .form-footer .form-control[placeholder] {
   color: #2b2b2b;
 }
 footer .col-contact {
-  background-image: url(../../images/elements/contact-map-2.png);
+  background-image: image-url(../../images/elements/contact-map-2.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -8976,14 +8976,14 @@ hr.style-2 {
   opacity: 0.6;
 }
 .mask.mask-1 {
-  background: url('..//images/patterns/slash-it.png');
+  background: image-url('..//images/patterns/slash-it.png');
   opacity: 0.8;
 }
 .mask.mask-1.v2 {
-  background: url('..//images/patterns/slash-it.png');
+  background: image-url('..//images/patterns/slash-it.png');
 }
 .mask.mask-2 {
-  background: url('..//images/patterns/dark-exa.png');
+  background: image-url('..//images/patterns/dark-exa.png');
   opacity: 0.4;
 }
 .mask.mask-3.v1 {
@@ -9003,7 +9003,7 @@ hr.style-2 {
   opacity: 0.6;
 }
 .mask.mask-5 {
-  background: url('..//images/patterns/cream-pixels.png');
+  background: image-url('..//images/patterns/cream-pixels.png');
   opacity: 0.4;
 }
 /* GENERAL STYLING */
@@ -11762,7 +11762,7 @@ img.profile-img{
   color: #333333;
 }
 .sort-list-bar.style-1 {
-  background: url('..//images/patterns/crossword.png');
+  background: image-url('..//images/patterns/crossword.png');
 }
 .sort-list-bar.style-2 {
   padding-top: 40px;
@@ -11951,7 +11951,7 @@ img.profile-img{
   background-color: rgba(31, 58, 147, 0.8);
   background-repeat: no-repeat;
   background-size: 32px 64px;
-  background-image: url("../images/icons/svg/google-maps/icon-controller.svg");
+  background-image: image-url("../images/icons/svg/google-maps/icon-controller.svg");
 }
 .no-touch #map-zoom-in:hover,
 .no-touch #map-zoom-out:hover {
@@ -12374,13 +12374,13 @@ img.profile-img{
   background: #d35400;
 }
 .color-switch a.color-bw {
-  background: url(../images/temp/bw.jpg) no-repeat;
+  background: image-url(../images/temp/bw.jpg) no-repeat;
 }
 .color-switch a.color-dark {
-  background: url(../images/temp/dark.jpg) no-repeat;
+  background: image-url(../images/temp/dark.jpg) no-repeat;
 }
 .color-switch a.color-flat {
-  background: url(../images/temp/flat.jpg) no-repeat;
+  background: image-url(../images/temp/flat.jpg) no-repeat;
 }
 /* 404 ERROR PAGE */
 .heading-404 {
@@ -12497,7 +12497,7 @@ img.profile-img{
 /* WELCOME PAGE */
 .welcome-page {
   background-color: #FFF;
-  background-image: url('../images/elements/contact-map-1.png');
+  background-image: image-url('../images/elements/contact-map-1.png');
   background-repeat: no-repeat;
   background-position: center right;
 }
