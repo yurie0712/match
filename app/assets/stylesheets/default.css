@@ -1607,12 +1607,12 @@ fieldset[disabled] .navbar-main .btn-link:focus {
 }
 /* QUICK SHADOW CLASSES (sht = shadow top; shb = shadow bottom; shl = shadow left; shr = shadow right) */
 .sht-1 {
-  background-image: image-url('..//images/shadows/shadow-1.png');
+  background-image: image-url('../images/shadows/shadow-1.png');
   background-repeat: no-repeat;
   background-position: top center;
 }
 .shb-1 {
-  background-image: image-url('..//images/shadows/shadow-1.png');
+  background-image: image-url('../images/shadows/shadow-1.png');
   background-repeat: no-repeat;
   background-position: bottom center;
 }
@@ -2161,22 +2161,22 @@ section.slice-xl {
   background-color: #ffffff;
 }
 .body-bg-4 {
-  background: image-url("..//images/patterns/diagmonds.png") repeat;
+  background: image-url("../images/patterns/diagmonds.png") repeat;
 }
 .body-bg-5 {
-  background: image-url("..//images/patterns/purty-wood.png") repeat;
+  background: image-url("../images/patterns/purty-wood.png") repeat;
 }
 .body-bg-6 {
-  background: image-url("..//images/patterns/brickwall.png") repeat;
+  background: image-url("../images/patterns/brickwall.png") repeat;
 }
 .body-bg-7 {
-  background: image-url("..//images/backgrounds/body-bg-1.jpg") no-repeat fixed;
+  background: image-url("../images/backgrounds/body-bg-1.jpg") no-repeat fixed;
 }
 .body-bg-8 {
-  background: image-url("..//images/backgrounds/body-bg-2.jpg") no-repeat fixed;
+  background: image-url("../images/backgrounds/body-bg-2.jpg") no-repeat fixed;
 }
 .body-bg-9 {
-  background: image-url("..//images/backgrounds/body-bg-3.jpg") no-repeat fixed;
+  background: image-url("../images/backgrounds/body-bg-3.jpg") no-repeat fixed;
 }
 /* ## FONT FAMILIES ## - Remove or comment the fonts you don't use*/
 /* Sue Ellen Francisco */
@@ -2807,7 +2807,7 @@ footer.style-4.bb {
 }
 /* IMAGE BG FOOTERS */
 footer.style-5 {
-  background: image-url("..//images/patterns/blue-diamonds.png");
+  background: image-url("../images/patterns/blue-diamonds.png");
 }
 /* GENERAL STYLING */
 footer:before,
@@ -8976,14 +8976,14 @@ hr.style-2 {
   opacity: 0.6;
 }
 .mask.mask-1 {
-  background: image-url("..//images/patterns/slash-it.png");
+  background: image-url("../images/patterns/slash-it.png");
   opacity: 0.8;
 }
 .mask.mask-1.v2 {
-  background: image-url("..//images/patterns/slash-it.png");
+  background: image-url("../images/patterns/slash-it.png");
 }
 .mask.mask-2 {
-  background: image-url("..//images/patterns/dark-exa.png");
+  background: image-url("../images/patterns/dark-exa.png");
   opacity: 0.4;
 }
 .mask.mask-3.v1 {
@@ -9003,7 +9003,7 @@ hr.style-2 {
   opacity: 0.6;
 }
 .mask.mask-5 {
-  background: image-url("..//images/patterns/cream-pixels.png");
+  background: image-url("../images/patterns/cream-pixels.png");
   opacity: 0.4;
 }
 /* GENERAL STYLING */
@@ -11762,7 +11762,7 @@ img.profile-img{
   color: #333333;
 }
 .sort-list-bar.style-1 {
-  background: image-url("..//images/patterns/crossword.png");
+  background: image-url("../images/patterns/crossword.png");
 }
 .sort-list-bar.style-2 {
   padding-top: 40px;
