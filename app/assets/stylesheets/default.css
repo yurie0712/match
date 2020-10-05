@@ -2943,7 +2943,7 @@ footer .form-footer .form-control[placeholder] {
   color: #2b2b2b;
 }
 footer .col-contact {
-  background-image: image-url(../../images/elements/contact-map-2.png);
+  background-image: image-url('../../images/elements/contact-map-2.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
