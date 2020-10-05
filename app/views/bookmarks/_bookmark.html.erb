@@ -7,7 +7,6 @@
     src="<%= bookmark.title %>">
     </iframe>
 <!--     <%= text_url_to_link(h(bookmark.title)).html_safe %> -->
-  </div>
   <ul class="inline-meta">
     <li>
       <%= link_to edit_bookmark_path(bookmark) do %>
@@ -15,4 +14,5 @@
       <% end %>
     </li>
   </ul>
+  </div>
 <% end %>
