@@ -5,6 +5,7 @@ class UsersController < ApplicationController
   	@user = User.find(params[:id])
   	@posts = @user.posts.all
     @likes = @user.likes.all
+    @posttags = PostTag.all
   end
 
   def edit

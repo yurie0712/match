@@ -18,6 +18,7 @@ def create
 end
 
 def show
+  @bookmark = Bookmark.find(params[:id])
 end
 
 def edit
@@ -31,12 +32,16 @@ def update
 end
 
 def destroy
+  @bookmark = Bookmark.find(params[:id])
+  @bookmark.destroy
+  redirect_to bookmarks_path
 end
 
 def bookmark_tag
   @user = current_user
-  @tag = BookmarkTag.find_by(tagname: params[:name])
-  @bookmark = @tag.bookmarks.all
+  @bookmarktag = BookmarkTag.all
+  @bookmarktags = BookmarkTag.find_by(tagname: params[:name])
+  @bookmarks = @bookmarktags.bookmarks.all.order(id: "DESC")
 end
 
 private

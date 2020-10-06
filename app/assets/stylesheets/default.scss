@@ -70,6 +70,16 @@ License URI: http://wrapbootstrap.com
   box-shadow: 0 10px 15px 0 rgba(0, 0, 0, .5);
 }
 
+/* bookmarkページ */
+.bookmark {
+  float: left;
+  height: 300px;
+  overflow: scroll;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  box-shadow: 0 10px 15px 0 rgba(0, 0, 0, .5);
+}
+
 /* NAVBAR */
 .navbar-main .navbar-text {
   color: #333333;
@@ -11592,6 +11602,7 @@ h5.profile-introduction{
 
 .profile-menu{
   text-align: center;
+  font-weight: 800;
 }
 
 .profile-container{

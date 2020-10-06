@@ -1,17 +1,14 @@
 <% bookmarks.each do |bookmark| %>
-  <div class="list">
-    <iframe id="inlineFrameExample"
-    title="Inline Frame Example"
-    width="300"
-    height="200"
-    src="<%= bookmark.title %>">
-    </iframe>
-<!--     <%= text_url_to_link(h(bookmark.title)).html_safe %> -->
+  <div class="bookmark">
+  <%= render_with_bookmark_tags(bookmark.title) %>
   <ul class="inline-meta">
     <li>
       <%= link_to edit_bookmark_path(bookmark) do %>
         <ion-icon name="menu-outline"></ion-icon>
       <% end %>
+    </li>
+    <li>
+      <%= link_to "削除", bookmark_path(bookmark), method: :delete %>
     </li>
   </ul>
   </div>

@@ -16,4 +16,7 @@ Rails.application.routes.draw do
   get '/like/like_tag/:name' => 'likes#like_tag'
   get '/like/like_tag' => 'likes#like_tag'
 
+  get '/bookmark/bookmark_tag/:name' => 'bookmarks#bookmark_tag'
+  get '/bookmark/bookmark_tag' => 'bookmarks#bookmark_tag'
+
 end

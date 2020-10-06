@@ -11,17 +11,31 @@
       <div class="col-md-2">
         <div class="sidemenu">
           <br>
-          <% @bookmarktags.each do |bookmarktag| %>
+            <% @bookmarktag.each do |bookmarktag| %>
             <br>
             <%= link_to "##{bookmarktag.tagname}(#{bookmarktag.bookmarks.count})","/bookmark/bookmark_tag/#{bookmarktag.tagname}",class: "btn btn-default btn-sm" %>
-          <% end %>
+            <% end %>
           <br>
           <br>
           <br>
         </div>
       </div>
       <div class="col-md-8">
-        <%= render 'bookmarks/bookmark', bookmarks: @bookmarks %>
+        <% @bookmarks.each do |bookmark| %>
+          <div class="bookmark">
+            <%= render_with_bookmark_tags(bookmark.title) %>
+            <ul class="inline-meta">
+              <li>
+                <%= link_to edit_bookmark_path(bookmark) do %>
+                  <ion-icon name="menu-outline"></ion-icon>
+                <% end %>
+              </li>
+              <li>
+                <%= link_to "削除", bookmark_path(bookmark), method: :delete %>
+              </li>
+            </ul>
+          </div>
+        <% end %>
       </div>
       <div class="col-md-1"></div>
     </div>
