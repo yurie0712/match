@@ -1,4 +1,4 @@
-class BookmarksBookmarkTag < ApplicationRecord
+class BookmarkTagsBookmark < ApplicationRecord
   belongs_to :bookmark_tag
   belongs_to :bookmark
   validates :bookmark_id, presence: true

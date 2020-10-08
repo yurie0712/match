@@ -1,12 +1,16 @@
 Rails.application.routes.draw do
 
   devise_for :users
-  root 'posts#index'
+  root 'homes#top'
   resources :posts do
   	delete '/likes' => 'likes#destroy'
   	post '/likes' => 'likes#create'
   end
-  resources :users, only: [:show, :edit, :update]
+  resources :users, only: [:show, :edit, :update] do
+    member do
+      get :following, :followers
+    end
+  end
   resources :likes, only: [:index, :edit, :update]
   resources :bookmarks
 
@@ -15,5 +19,10 @@ Rails.application.routes.draw do
 
   get '/like/like_tag/:name' => 'likes#like_tag'
   get '/like/like_tag' => 'likes#like_tag'
+
+  get '/bookmark/bookmark_tag/:name' => 'bookmarks#bookmark_tag'
+  get '/bookmark/bookmark_tag' => 'bookmarks#bookmark_tag'
+
+  resources :relationships, only: [:create, :destroy]
 
 end

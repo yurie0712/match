@@ -1,6 +1,6 @@
 class Bookmark < ApplicationRecord
   belongs_to :user
-  has_and_belongs_to_many :bookmark_tags
+  has_and_belongs_to_many :bookmark_tags, dependent: :destroy
 
   # DBへのコミット直前に実施する
   after_create do

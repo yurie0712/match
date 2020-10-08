@@ -1,6 +1,22 @@
+<!-- アイコン画像 -->
 <%= attachment_image_tag user, :profile_image, :fill, 60, 60, format: 'jpeg', class: "img-circle pull-left profile-img", fallback: "no_image.jpg" %>
+<!-- ユーザーネーム -->
 <h3 class="profile-name"><%= user.name %></h3>
 <h4 class="profile-other">
+  <!-- フォロー／フォロワーボタン -->
+  <% unless current_user?(user) %>
+    <% if current_user.following?(user) %>
+      <%= form_for(current_user.following_relationships.find_by(following_id: user.id), html: { method: :delete }) do |f| %>
+        <%= f.submit "フォローを外す", class: "btn btn-sm follow-btn" %>
+      <% end %>
+    <% else %>
+      <%= form_for(current_user.following_relationships.build(following_id: user.id)) do |f| %>
+        <div><%= f.hidden_field :following_id %></div>
+        <%= f.submit "フォローをする", class: "btn btn-sm btn-primary follow-btn" %>
+      <% end %>
+    <% end %>
+  <% end %>
+  <!-- 編集ボタン -->
 	<% if user.id == current_user.id %>
 	  <%= link_to edit_user_path(user) do %>
 	    <ion-icon name="settings-outline"></ion-icon>
@@ -8,8 +24,9 @@
 	<% end %>
 </h4>
 <br>
+<!-- ユーザー情報 -->
 <h4 class="profile-sub">
-	投稿21件　フォロワー233人　フォロー中488人
+	投稿<%= user.posts.count %>件　フォロワー<%= user.followers.count %>人　フォロー中<%= user.followings.count %>人
 </h4>
 <br>
 <h5 class="profile-introduction">

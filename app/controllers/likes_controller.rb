@@ -2,8 +2,8 @@ class LikesController < ApplicationController
 
   def index
     @user = current_user
-    @likes = @user.likes.all.order(id: "DESC")
-    @liketags = LikeTag.all
+    @likes = Like.where(user_id: @user.id).order(id: "DESC")
+    @liketags = LikeTagsLike.select("like_tags.*").joins(:like_tag).where(like_id: @likes.pluck(:id))
   end
 
   def create

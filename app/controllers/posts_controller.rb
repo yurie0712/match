@@ -37,6 +37,7 @@ class PostsController < ApplicationController
   def post_tag
     @user = current_user
     @tag = PostTag.find_by(tagname: params[:name])
+    @posttags = PostTag.all
     @post = @tag.posts.all
   end
 
