@@ -2,8 +2,8 @@ class BookmarksController < ApplicationController
 
 def index
   @user = current_user
-  @bookmarks = @user.bookmarks.all.order(id: "DESC")
-  @bookmarktags = BookmarkTag.all
+  @bookmarks = Bookmark.where(user_id: @user.id).order(id: "DESC")
+  @bookmarktags = BookmarkTagsBookmark.select("bookmark_tags.*").joins(:bookmark_tag).where(bookmark_id: @bookmarks.pluck(:id))
 end
 
 def new

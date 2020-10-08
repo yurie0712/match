@@ -1,35 +1,36 @@
+<div class="profile-container">
+  <%= render 'users/profile', user: @user %>
+</div>
+<div class="profile-menu">
+  <%= link_to user_path(@user) do %><ion-icon name="grid-outline"></ion-icon> 投稿<% end %>　<%= link_to likes_path do %><ion-icon name="heart-outline"></ion-icon> お気に入り<% end %>　<%= link_to bookmarks_path do %><ion-icon name="bookmark-outline"></ion-icon> Bookmark<% end %>
+</div>
 <section class="sct-color-1 slice">
   <div class="container-fluid masonry-container">
     <div class="row">
-      <div class="col-md-8 col-sm-offset-2">
-        <div class="masonry-wrapper-cols">
-          <div class="masonry-gutter"></div>
+      <div class="col-md-1"></div>
+      <div class="col-md-2">
+        <div class="sidemenu">
+          <br>
+          <% @posttags.each do |posttag| %>
+            <br><%= link_to  "##{posttag.tagname}","/post/post_tag/#{posttag.tagname}",class: "btn btn-default btn-sm" %>
+          <% end %>
+          <br>
+          <br>
+          <br>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <div class="clearfix">
           <% @post.each do |post| %>
-            <div class="masonry-block">
-              <div class="block block-image v1">
-                <div class="block-image">
-                  <div class="view view-first">
-                    <%= link_to post_path(post.id) do %>
-                      <%= attachment_image_tag post, :image %>
-                    <% end %>
-                  </div>
-                </div>
-                <div class="block-content">
-                  <p><%= render_with_post_tags(post.caption) %></p>
-                  <ul class="inline-meta">
-                    <li>By
-                      <%= post.user.name %>
-                    </li>
-                    <li>
-                      <a href="#">23 コメント</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
+            <div class="list">
+              <%= link_to post_path(post.id) do %>
+                <%= attachment_image_tag post, :image, :fill, 250, 250 %>
+              <% end %>
             </div>
           <% end %>
         </div>
       </div>
+      <div class="col-md-1"></div>
     </div>
   </div>
 </section>

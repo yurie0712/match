@@ -49,9 +49,38 @@ License URI: http://wrapbootstrap.com
   clear: both;
 }
 
+/* topページ */
+.top {
+  background-color: #ffffff;
+  height: 1000px;
+  text-align: center;
+}
+
+.top-logo{
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px;
+}
+
+.top-text{
+  text-align: left;
+  padding-left: 20px;
+}
+
 /* indexページ */
 .index-list {
   box-shadow: 0 10px 15px 0 rgba(0, 0, 0, .5);
+}
+
+.block-top {
+  padding: 0 20px;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.block-like {
+  text-align: right;
+  font-size: 25px;
 }
 
 /* listページ */
@@ -6107,7 +6136,6 @@ figure.effect-chico:hover p {
 
 /*画像のサイズ変更*/
 .block.block-image .block-image img {
-  width: 70%;
   margin: 10px auto;
 }
 
@@ -11602,7 +11630,18 @@ h5.profile-introduction{
 
 .profile-menu{
   text-align: center;
-  font-weight: 800;
+  vertical-align: text-top;
+  font-weight: 500;
+  font-size: small;
+  letter-spacing: 2px;
+}
+
+.profile-menu a{
+  color: #333333;
+}
+
+.profile-menu a:hover{
+  text-decoration:none;
 }
 
 .profile-container{

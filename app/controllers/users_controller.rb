@@ -3,9 +3,9 @@ class UsersController < ApplicationController
 
   def show
   	@user = User.find(params[:id])
-  	@posts = @user.posts.all
-    @likes = @user.likes.all
-    @posttags = PostTag.all
+  	@posts = Post.where(user_id: @user.id).order(id: "DESC")
+    @likes = Like.where(user_id: @user.id)
+    @posttags = PostTagsPost.select("post_tags.*").joins(:post_tag).where(post_id: @posts.pluck(:id))
   end
 
   def edit

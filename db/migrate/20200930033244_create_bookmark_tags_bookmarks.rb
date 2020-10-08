@@ -1,4 +1,4 @@
-class CreateBookmarksBookmarkTags < ActiveRecord::Migration[5.2]
+class CreateBookmarkTagsBookmarks < ActiveRecord::Migration[5.2]
   def change
     create_table :bookmark_tags_bookmarks do |t|
       t.references :bookmark, index: true, foreign_key: true
