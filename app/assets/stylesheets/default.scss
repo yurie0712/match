@@ -52,8 +52,13 @@ License URI: http://wrapbootstrap.com
 /* topページ */
 .top {
   background-color: #ffffff;
-  height: 1000px;
+  height: 800px;
   text-align: center;
+}
+
+.top-nil {
+  text-align: center;
+  font-size: 20px;
 }
 
 .top-logo{
@@ -62,9 +67,33 @@ License URI: http://wrapbootstrap.com
   font-size: 30px;
 }
 
-.top-text{
+.top-text1{
   text-align: left;
   padding-left: 20px;
+}
+
+.top-text2{
+  text-align: left;
+  padding-left: 20px;
+  line-height: 2;
+}
+
+.top-content{
+  padding-top: 50px;
+}
+
+.top-container{
+  overflow: hidden;
+  height: 400px;
+  width: 400px;
+  border-radius: 50%;
+  box-shadow: 0 0px 1px 0 rgba(0, 0, 0, .5);
+}
+
+/* 会員登録ページ */
+.login-signup-title {
+  text-size: 20px;
+  margin: 20px 20px 0 20px;
 }
 
 /* indexページ */
@@ -81,6 +110,11 @@ License URI: http://wrapbootstrap.com
 .block-like {
   text-align: right;
   font-size: 25px;
+}
+
+/* footerページ */
+.footer-content {
+  text-align: center;
 }
 
 /* listページ */
@@ -1812,7 +1846,7 @@ section.slice {
   padding: 46px 0;
   position: relative;
   /*背景色追加*/
-  background-color: #EAEBED;
+  # background-color: #EAEBED;
 }
 section.slice-lg {
   padding: 86px 0;
@@ -2823,7 +2857,7 @@ footer.style-1.bb {
   border-color: #1e1e1e !important;
 }
 footer.style-2 {
-  background: #EAEBED;
+  # background: #EAEBED;
 }
 footer.style-2.bt,
 footer.style-2.bb {
