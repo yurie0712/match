@@ -11,7 +11,10 @@ class PostsController < ApplicationController
   end
 
   def index
-    @posts = Post.all.includes(:user).order(id: "DESC")
+    if params[:post].nil?
+    else
+      @posts = Post.all.includes(:user).order(id: "DESC")
+    end
   end
 
   def show

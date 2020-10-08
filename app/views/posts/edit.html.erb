@@ -1,15 +1,12 @@
-<section class="slice sct-color-1">
+<section class="slice slice-lg sct-color-1">
   <div class="container">
     <div class="row">
-      <div class="col-md-12">
-        <div class="row">
-          <div class="col-md-6 col-md-offset-3 post_image_form">
-            <div class="section-title-wrapper style-1 v1">
-              <h3 class="section-title section-title-sm left">
-                <span>画像編集フォーム</span>
-              </h3>
-            </div>
-            <%= form_with model:@post, url: post_path, local: true do |f| %>
+      <div class="col-xs-3"></div>
+      <div class="col-xs-6">
+        <div class="form-user style-1 rounded has-shadow-1">
+          <div class="login-signup-title">画像投稿フォーム</div>
+          <div class="form-body">
+            <%= form_with model:@post, url: posts_path, local: true do |f| %>
               <% if @post.errors.any? %>
                 <div id="error_explanation">
                   <h2><%= @post.errors.count %>件のエラーが発生しました。</h2>
@@ -32,11 +29,12 @@
                 </div>
               </div>
               <hr>
-              <%= f.submit "送信", class:"btn btn-lg btn-block btn-base-1 mt-20" %>
+              <%= f.submit "送信", class:"btn btn-info btn-block" %>
             <% end %>
           </div>
         </div>
       </div>
+      <div class="col-xs-3"></div>
     </div>
   </div>
 </section>
