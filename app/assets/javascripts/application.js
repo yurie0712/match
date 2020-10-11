@@ -17,6 +17,26 @@
 //= require bootstrap-sprockets
 //= require_tree .
 
+$(function(){
+    $(document).on('change', '.image-prev', function (e) {
+    var reader = new FileReader();
+    reader.onload = function (e) {
+        $(".profile_image").attr('src', e.target.result);
+    }
+    reader.readAsDataURL(e.target.files[0]);
+});
+});
+
+$(function(){
+    $(document).on('change', '.image-prev', function (e) {
+    var reader = new FileReader();
+    reader.onload = function (e) {
+        $(".image").attr('src', e.target.result);
+    }
+    reader.readAsDataURL(e.target.files[0]);
+});
+});
+
 // タイトル
 document.querySelector('meta[property="og:title"]').getAttribute('content');
 

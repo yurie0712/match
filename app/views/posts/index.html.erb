@@ -4,7 +4,7 @@
       <div class="col-md-2"></div>
       <div class="col-md-8">
         <div class="masonry-wrapper-cols">
-          <% if params[:post] == nil %>
+          <% if @posts == [] %>
             <div class="top-nil">
               <ion-icon name="images"></ion-icon> 画像を投稿してみよう！
             </div>

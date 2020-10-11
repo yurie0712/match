@@ -23,8 +23,10 @@
         <div class="clearfix">
           <% @like.each do |like| %>
             <div class="like">
-              <%= link_to like_path(like.id) do %>
-                <%= attachment_image_tag like.post, :image, :fill, 250, 250 %>
+              <% if like.user_id == @user.id %>
+                <%= link_to like_path(like.id) do %>
+                  <%= attachment_image_tag like.post, :image, :fill, 250, 250 %>
+                <% end %>
               <% end %>
               <ul class="inline-meta">
                 <li>

@@ -6,7 +6,7 @@
         <div class="form-user style-1 rounded has-shadow-1">
           <div class="login-signup-title">Bookmark投稿フォーム</div>
           <div class="form-body">
-            <%= form_with model:@bookmark, url: bookmarks_path, local: true do |f| %>
+            <%= form_with model:@bookmark, url: bookmark_path, local: true do |f| %>
               <% if @bookmark.errors.any? %>
                 <div id="error_explanation">
                   <h2><%= @bookmark.errors.count %>件のエラーが発生しました。</h2>

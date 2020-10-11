@@ -39,9 +39,10 @@ end
 
 def bookmark_tag
   @user = current_user
-  @bookmarktag = BookmarkTag.all
-  @bookmarktags = BookmarkTag.find_by(tagname: params[:name])
-  @bookmarks = @bookmarktags.bookmarks.all.order(id: "DESC")
+  @bookmarks = Bookmark.where(user_id: @user.id).order(id: "DESC")
+  @bookmarktags = BookmarkTagsBookmark.select("bookmark_tags.tagname").joins(:bookmark_tag).where(bookmark_id: @bookmarks.pluck(:id)).distinct
+  @tag = BookmarkTag.find_by(tagname: params[:name])
+  @bookmark = @tag.bookmarks.all.order(id: "DESC")
 end
 
 private

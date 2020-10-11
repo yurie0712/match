@@ -5,7 +5,9 @@ class UsersController < ApplicationController
   	@user = User.find(params[:id])
   	@posts = Post.where(user_id: @user.id).order(id: "DESC")
     @likes = Like.where(user_id: @user.id)
-    @posttags = PostTagsPost.select("post_tags.*").joins(:post_tag).where(post_id: @posts.pluck(:id))
+    # PostTagsPostテーブルと結合したPostTagテーブルの@postsの配列にした情報からPostTagの情報を持ってくる。
+    # distinct＝重複を避ける。使用時はカラムを指定する為、*→tagnameを記載。
+    @posttags = PostTagsPost.select("post_tags.tagname").joins(:post_tag).where(post_id: @posts.pluck(:id)).distinct
   end
 
   def edit
