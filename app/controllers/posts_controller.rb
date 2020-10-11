@@ -11,10 +11,7 @@ class PostsController < ApplicationController
   end
 
   def index
-    if params[:post].nil?
-    else
       @posts = Post.all.includes(:user).order(id: "DESC")
-    end
   end
 
   def show
@@ -39,8 +36,13 @@ class PostsController < ApplicationController
 
   def post_tag
     @user = current_user
+    # @userのpostを指定する。
+    @posts = Post.where(user_id: @user.id).order(id: "DESC")
+    # PostTagsPostテーブルと結合したPostTagテーブルの@postsの配列にした情報からPostTagのtagname情報を持ってくる。
+    @posttags = PostTagsPost.select("post_tags.tagname").joins(:post_tag).where(post_id: @posts.pluck(:id)).distinct
+    # PostTagテーブルからtagnameを指定する
     @tag = PostTag.find_by(tagname: params[:name])
-    @posttags = PostTag.all
+    # @tagのpost全てを指定する
     @post = @tag.posts.all
   end
 

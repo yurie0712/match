@@ -51,7 +51,7 @@ License URI: http://wrapbootstrap.com
 
 /* topページ */
 .top {
-  background-color: #ffffff;
+  background-color: #fbfbfb;
   height: 800px;
   text-align: center;
 }
@@ -123,6 +123,10 @@ License URI: http://wrapbootstrap.com
   margin-right: 5px;
   margin-bottom: 5px;
   box-shadow: 0 10px 15px 0 rgba(0, 0, 0, .5);
+}
+
+.post-image {
+  margin: auto;
 }
 
 /* likeページ */

@@ -23,8 +23,10 @@
         <div class="clearfix">
           <% @post.each do |post| %>
             <div class="list">
-              <%= link_to post_path(post.id) do %>
-                <%= attachment_image_tag post, :image, :fill, 250, 250 %>
+              <% if post.user_id == @user.id %>
+                <%= link_to post_path(post.id) do %>
+                  <%= attachment_image_tag post, :image, :fill, 250, 250 %>
+                <% end %>
               <% end %>
             </div>
           <% end %>
