@@ -1,24 +1,37 @@
-# README
+# match -マッチ-
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## サイト概要
+- 自分の「興味・関心」をカテゴライズすることに特化したWEBアプリケーション
+- 柔軟なフォルダ整理機能により、好きな時にいつでもすぐに欲しい情報を引き出せる画像管理アプリ
 
-Things you may want to cover:
+### サイトテーマ
+- 自分の「好き」をいつでもどこでも
 
-* Ruby version
+### テーマを選んだ理由
+インスタグラムやピンタレストを通して、自分の興味関心が広がる機会が増えた一方で、
+情報が多く整理しきれない為、興味・関心を広げたり、深めることに苦労していた。
+その為、画像のフォルダ分けに柔軟に対応したツールが欲しく、今回のアプリケーションを作りたいと思った。
 
-* System dependencies
+### ターゲットユーザ
+- 自分の興味／関心に関わる情報を整理して保存しておきたい人の為
+- 「自分はこういうのが好きだったんだ」という自分の趣味趣向に新しい発見をしたい人の為
 
-* Configuration
+### 主な利用シーン
+日常や、旅行など日々のなかで興味関心を持った写真や画像を
+アップロードし、１つの画像に複数のタグを持つことで、
+様々なシーンで欲しい情報に関連性の高い情報を引き出すことができる
+例）プリンが美味しそうな画像
+　タグ①：プリン　タグ②：神奈川　タグ③：いつか絶対に行きたい
+　→それぞれのタグ検索に反映される
 
-* Database creation
+## 設計書
 
-* Database initialization
+### 機能一覧
+https://docs.google.com/spreadsheets/d/1NnFOcP3h2NING9ZHGMGUWxssrhF-CKsgLh4NHGfWsa8/edit?usp=sharing
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## 開発環境
+- OS：macOS Catalina version 10.15.6
+- 言語：HTML,CSS,JavaScript,Ruby
+- フレームワーク：Ruby on Rails
+- JSライブラリ：jQuery
+- 仮想環境：Vagrant# match
