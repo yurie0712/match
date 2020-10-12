@@ -12,11 +12,7 @@
  *
  *= require_tree .
  *= require_self
- *= require jquery-ui
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
-@import "jquery-ui/autocomplete";
-@import "jquery-ui/theme";
-@import "jquery-ui/menu";
