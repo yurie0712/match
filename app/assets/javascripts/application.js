@@ -13,7 +13,6 @@
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
-//= require jquery-ui/widgets/autocomplete
 //= require jquery
 //= require bootstrap-sprockets
 //= require_tree .
@@ -43,13 +42,3 @@ document.querySelector('meta[property="og:title"]').getAttribute('content');
 
 // ディスクリプション
 document.querySelector('meta[property="og:description"]').getAttribute('content')
-
-// オートコンプリート
-$(function() {
-  var places = ['品川','有楽町','浜松町','江戸川'];
-  $( '#caption' ).autocomplete({
-      autoFocus: true,  //テキストフィールドの値をフォーカスされたアイテムの値で置き換える
-      source: places,  //サジェストのデータを呼び出す
-      minLength: 1,  //オートコンプリートが動作する文字数を指定
-  });
-});
