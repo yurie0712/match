@@ -2,6 +2,7 @@ class Post < ApplicationRecord
 
   belongs_to :user
   attachment :image
+  validates :image, presence: true
   has_many :likes, dependent: :destroy
   has_and_belongs_to_many :post_tags
 
