@@ -31,11 +31,11 @@
                           <% if user_signed_in? %>
                             <% if post.liked_by?(current_user) %>
                               <%= link_to post_likes_path(post), method: :delete do %>
-                                <i class="fa fa-heart" aria-hidden="true" style="color: red;"></i>
+                                <ion-icon name="heart" style="color: red;"></ion-icon>
                               <% end %>
                             <% else %>
                               <%= link_to post_likes_path(post), method: :post do %>
-                                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                <ion-icon name="heart-outline"></ion-icon>
                               <% end %>
                             <% end %>
                           <% end %>
