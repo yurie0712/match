@@ -1,0 +1,35 @@
+<section class="slice slice-lg sct-color-1">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-3"></div>
+      <div class="col-xs-6">
+        <div class="login-signup-title">フォロー中のアカウント</div>
+        <% if  @users.present? %>
+          <% @user.followings.each do |user| %>
+            <table class="table">
+              <tbody>
+                <tr>
+                  <td><%= attachment_image_tag(user, :profile_image, size: "35x35", fallback: "no_image.jpg") %></td>
+                  <td><%= user.name %></td>
+                  <td>フォロー数：<%= user.followings.count %></td>
+                  <td>フォロワー数：<%= user.followers.count %></td>
+                  <td></td>
+                  <td><%= link_to "Show", user_path(user), class: "user_#{user.id}" %></td>
+                </tr>
+              </tbody>
+            </table>
+          <% end %>
+        <% else %>
+          <div class="top-nil">
+            <br>
+            <br>ユーザーはいません。
+            <br>
+            <br>
+            <br>
+          </div>
+        <% end %>
+      </div>
+      <div class="col-xs-3"></div>
+    </div>
+  </div>
+</section>

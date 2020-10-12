@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     member do
       get :following, :followers
     end
+    put "/users/:id/hide" => "users#hide", as: 'users_hide'
   end
   resources :likes, only: [:index, :edit, :update]
   resources :bookmarks
