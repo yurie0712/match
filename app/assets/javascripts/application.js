@@ -36,9 +36,3 @@ $(function(){
     reader.readAsDataURL(e.target.files[0]);
 });
 });
-
-// タイトル
-document.querySelector('meta[property="og:title"]').getAttribute('content');
-
-// ディスクリプション
-document.querySelector('meta[property="og:description"]').getAttribute('content')
