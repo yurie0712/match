@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :posts do
   	delete '/likes' => 'likes#destroy'
   	post '/likes' => 'likes#create'
+    get :search, on: :collection
   end
   resources :users, only: [:show, :edit, :update] do
     member do
