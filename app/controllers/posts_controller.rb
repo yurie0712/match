@@ -48,6 +48,24 @@ class PostsController < ApplicationController
     @post = @tag.posts.all
   end
 
+  def hide
+    @user = User.find(params[:id])
+    #is_deletedカラムにフラグを立てる(defaultはfalse)
+    @user.update(is_deleted: true)
+    #ログアウトさせる
+    reset_session
+    flash[:notice] = "ありがとうございました。またのご利用を心よりお待ちしております。"
+    redirect_to root_path
+  end
+
+  def search
+    if params[:caption].present?
+      @posts = Post.where('caption LIKE ?', "%#{params[:caption]}%")
+    else
+      @posts = Post.none
+    end
+  end
+
   private
 
   def post_params

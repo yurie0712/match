@@ -34,6 +34,14 @@
               <span class="icon-bar"></span>
             </button>
           </div>
+          <% if user_signed_in? %>
+            <div class="search">
+              <%= form_with url: search_posts_path, method: :get, local: true do |f| %>
+                <%= f.text_field :caption %>　<%= f.submit :search %>
+              <% end %>
+            </div>
+          <% else %>
+          <% end %>
           <div id="slidemenu">
             <ul class="nav navbar-nav navbar-right" data-hover="dropdown" data-animations="zoomIn fadeIn fadeInUp fadeIn">
               <% if user_signed_in? %>
