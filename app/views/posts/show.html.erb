@@ -19,21 +19,10 @@
                 <%= @post.created_at.strftime('%Y/%m/%d') %>
               </li>
               <!-- いいね -->
-              <% if user_signed_in? %>
-                <% if @post.liked_by?(current_user) %>
-                <li>
-                  <%= link_to post_likes_path(@post), method: :delete do %>
-                    <ion-icon name="heart" style="color: red;"></ion-icon>
-                  <% end %>
-                </li>
-                <% else %>
-                <li>
-                  <%= link_to post_likes_path(@post), method: :post do %>
-                    <ion-icon name="heart-outline"></ion-icon>
-                  <% end %>
-                </li>
-                <% end %>
-              <% end %>
+                <div id="likes_buttons_<%= @post.id %>">
+                  <%= render partial: 'likes/likebutton', locals: { post: @post} %>
+                </div>
+              <!-- ↑ここまで -->
               <!-- 編集／削除ボタン -->
               <li>
                 <% if @post.user == current_user %>
