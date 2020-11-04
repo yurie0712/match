@@ -28,17 +28,11 @@
                       </div>
                       <div class="col-md-1">
                         <div class="block-like">
-                          <% if user_signed_in? %>
-                            <% if post.liked_by?(current_user) %>
-                              <%= link_to post_likes_path(post), method: :delete do %>
-                                <ion-icon name="heart" style="color: red;"></ion-icon>
-                              <% end %>
-                            <% else %>
-                              <%= link_to post_likes_path(post), method: :post do %>
-                                <ion-icon name="heart-outline"></ion-icon>
-                              <% end %>
-                            <% end %>
-                          <% end %>
+                          <!-- いいね -->
+                          <div id="likes_buttons_<%= post.id %>">
+                            <%= render partial: 'likes/likebutton', locals: { post: post} %>
+                          </div>
+                          <!-- ↑ここまで -->
                         </div>
                       </div>
                     </div>

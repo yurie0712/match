@@ -1,0 +1,11 @@
+<% if user_signed_in? %>
+  <% if post.liked_by?(current_user) %>
+    <%= link_to post_likes_path(post, redirect_id: 0), method: :delete, remote: true do %>
+      <ion-icon name="heart" style="color: red;"></ion-icon>
+    <% end %>
+  <% else %>
+    <%= link_to post_likes_path(post, redirect_id: 0), method: :post, remote: true do %>
+      <ion-icon name="heart-outline"></ion-icon>
+    <% end %>
+  <% end %>
+<% end %>

@@ -13,7 +13,7 @@ class PostsController < ApplicationController
   end
 
   def index
-      @posts = Post.all.includes(:user).order(id: "DESC")
+    @posts = Post.all.includes(:user).order(id: "DESC")
   end
 
   def show
