@@ -1,8 +1,8 @@
 <section class="slice slice-lg sct-color-1">
   <div class="container">
     <div class="row">
-      <div class="col-xs-3"></div>
-      <div class="col-xs-6">
+      <div class="col-md-3"></div>
+      <div class="col-md-6">
         <div class="form-user style-1 rounded has-shadow-1">
           <div class="login-signup-title">新規投稿フォーム</div>
           <div class="form-body">
@@ -20,7 +20,7 @@
               <div class="row">
                 <div class="col-sm-2"></div>
                 <div class="col-sm-8">
-                  <%= attachment_image_tag @post, :image, class: "img-square", format: 'jpeg', fallback: "no_image.jpg", size:"300x300" %>
+                  <%= attachment_image_tag @post, :image, class: "img-square", format: 'jpeg', fallback: "no_image.jpg", width:"80%" %>
                   <%= f.attachment_field :image, placeholder: "画像", class: "image-prev" %>
                 </div>
                 <div class="col-sm-2"></div>
@@ -37,7 +37,7 @@
           </div>
         </div>
       </div>
-      <div class="col-xs-3"></div>
+      <div class="col-md-3"></div>
     </div>
   </div>
 </section>
