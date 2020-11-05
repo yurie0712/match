@@ -258,6 +258,8 @@ License URI: http://wrapbootstrap.com
 /* QUICK BORDER CLASSES - with default color setted in global less file (ba = border all; bt = border top; br = border right etc) */
 .bt {
   border-top: 1px solid #f1f1f1;
+  width: 70%;
+  margin: auto;
 }
 .bb {
   border-bottom: 1px solid #f1f1f1;
@@ -356,7 +358,7 @@ footer:after {
 
 /* LIST META INFO */
 ul.meta-info-cells {
-  width: 100%;
+  width: 70%;
   margin: 0;
   padding: 0;
   display: block;
@@ -372,7 +374,7 @@ ul.meta-info-cells.v4 li {
   font-family: "Roboto", sans-serif;
 }
 ul.meta-info-cells.v4 li:first-child {
-  padding-left: 0;
+  padding-left: 200px;
 }
 ul.meta-info-cells.v4 li:last-child {
   border: 0;
@@ -597,13 +599,14 @@ h5.profile-introduction{
   margin: 0 auto;
 }
 
-/* BLOG POST */
+/* POST */
 .post-item {
   margin-bottom: 20px;
   position: relative;
 }
 .post-image {
   position: relative;
+  text-align: center;
 }
 .post_images_container{
   background-color: #fff;
